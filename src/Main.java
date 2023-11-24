@@ -1,17 +1,26 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        AirPurifier A = new AirPurifier();
+        A.setBrand("Mixiao");
+        A.setModel("DEZ13579");
+        A.setColor("White");
+        A.setFilter_type("cotton");
+        A.setFilter_life(100);
+        A.turnOn();
+        A.setMode("high");
+        A.display();
+        System.out.println(AirPurifier.getModelCount());
+        System.out.println(AirPurifier.mostPopularModel());
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
 }
+
+//อธิบายฟังก์ชันบางส่วนเพิ่มเติม
+//เมื่อทำการturnOn จะทำการสุ่มตัวเลข Airquality เป็นการจำลองการวัดคุณภาพอากาศณขณะนั้น
+//แต่เมื่อทำการturnOff ค่า Airqualtity เป็น 0
+//เมื่อทำการถามหาค่าModelCountจะทำการสุ่มเลขModelCountให้
+//การsetMode ได้ 4 แบบ low medium high off
+//--------------อ้างอิง---------------------
+//ได้มีการอ้างอิงโค้ดจากslide lec02
+//ได้แนวไอเดียบางส่วนมาจาก ChatGPT ในการออกแบบแต่มีการนำมาปรับให้เป็นโค้ดตัวเอง
